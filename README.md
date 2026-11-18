@@ -23,15 +23,16 @@ Note: No LLM/AI was used to write or read or review any code, and as much as pos
 
 ## To do list
 ### Phases of this project
-    1. Compression
-        - Currently I want to make a decision between rewriting code to follow canonical huffman code, or continue
-        - I want to find solution to edge cases where input file includes chars not in ASCII (i.e. first bit is 1 not 0) which are currently ignored. I think wchar may fix this (?), if not an easy fix for now I will consider assuming all files are ASCII and change `POSSIBLE_CHARS` const to 128 not 256.
-        - Also deal with files including EOF, this is an issue as I made the head to be EOF, maybe I could instead have a bool or a function to tell if a node in tree is a leaf or not (both children are null). A segmentation fault occurs for some reason when an EOF is entered.
-        - Actually create an ofstream which would be the decompressed file, it should include metadata like the `MAGIC_BYTES` and the code book (how it is stored would depend if I make the code canonical or not)
-        - Is 0.5GB too much RAM to take for buffering file?
-    2. Decompression
-        - Write different function to read the decompressed file (this will depend on how the final compressed file implementation is)
-    3. Application
-        - I am thinking of looking into an application of compression that studies language tree, this was made as a scientific research in 2002 I believe. A video made by 3Blue1Brown mentions it. I would like to see how it compares with results of the research, and see if a simpler algorithim has any impact on the results. This will be done at a stage where the program is completely capable of compression and decompression with actual output.
-        - Might try to see if there are any other applications like this. 
+
+1. Compression
+    - Currently I want to make a decision between rewriting code to follow canonical huffman code, or continue
+    - I want to find solution to edge cases where input file includes chars not in ASCII (i.e. first bit is 1 not 0) which are currently ignored. I think wchar may fix this (?), if not an easy fix for now I will consider assuming all files are ASCII and change `POSSIBLE_CHARS` const to 128 not 256.
+    - Also deal with files including EOF, this is an issue as I made the head to be EOF, maybe I could instead have a bool or a function to tell if a node in tree is a leaf or not (both children are null). A segmentation fault occurs for some reason when an EOF is entered.
+    - Actually create an ofstream which would be the decompressed file, it should include metadata like the `MAGIC_BYTES` and the code book (how it is stored would depend if I make the code canonical or not)
+    - Is 0.5GB too much RAM to take for buffering file?
+2. Decompression
+    - Write different function to read the decompressed file (this will depend on how the final compressed file implementation is)
+3. Application
+    - I am thinking of looking into an application of compression that studies language tree, this was made as a scientific research in 2002 I believe. A video made by 3Blue1Brown mentions it. I would like to see how it compares with results of the research, and see if a simpler algorithim has any impact on the results. This will be done at a stage where the program is completely capable of compression and decompression with actual output.
+    - Might try to see if there are any other applications like this. 
 
