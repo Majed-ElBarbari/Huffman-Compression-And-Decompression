@@ -1,0 +1,27 @@
+Refrences:
+
+3Blue1Brown videos:
+	https://www.youtube.com/watch?v=GlYgs6v2YfU
+	https://www.youtube.com/watch?v=l6DKRf-fAAM
+
+Insertion sort:
+	https://www.geeksforgeeks.org/dsa/insertion-sort-algorithm/
+
+File I/O:
+	https://www.w3schools.com/cpp/cpp_files.asp
+	https://www.learncpp.com/cpp-tutorial/basic-file-io/
+	https://www.learncpp.com/cpp-tutorial/random-file-io/
+	https://stackoverflow.com/questions/34751873/how-to-read-huge-file-in-c
+	https://cppreference.com/cpp/io/basic_istream/get
+
+Why I set buffer size to 0.5GB and not change it depending on current memory:
+(possible but hard)
+	https://stackoverflow.com/questions/2513505/how-to-get-available-memory-c-g
+
+Header guards:
+	https://www.learncpp.com/cpp-tutorial/header-guards/
+Priority Queue:
+	https://www.geeksforgeeks.org/dsa/priority-queue-set-1-introduction/
+
+Huffman tree generator to check results:
+	https://www.csfieldguide.org.nz/en/interactives/huffman-tree/
