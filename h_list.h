@@ -47,7 +47,7 @@ struct h_list
 			head = new_node;
 			return;
 		}
-		while (cur_node != nullptr && cur_node->next != nullptr && cur_node->h_data->freq <= f)
+		while (cur_node->next != nullptr && cur_node->next->h_data->freq <= f)
 		{
 			cur_node = cur_node->next;
 		}
